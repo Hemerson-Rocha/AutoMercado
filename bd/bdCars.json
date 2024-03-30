@@ -1,0 +1,75 @@
+{
+  "cars": [
+    {
+      "id": "1",
+      "img": [
+        "https://img.freepik.com/fotos-gratis/um-jipe-offroader-branco-no-estacionamento_114579-4007.jpg?w=740&t=st=1711559242~exp=1711559842~hmac=6409b9f3e5497d3cacf1f0b4112462df74bbbc8b22d35c941c72864df9448d0a",
+        "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
+        "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740"
+      ],
+      "brand": "chevrolet",
+      "model": "Impala",
+      "year": "1967",
+      "milaeage": "12.985",
+      "value": "200.500",
+      "location": "Amontada - CE",
+      "favorite": false
+    },
+    {
+      "id": "2",
+      "img": [
+        "https://img.freepik.com/fotos-gratis/um-jipe-offroader-branco-no-estacionamento_114579-4007.jpg?w=740&t=st=1711559242~exp=1711559842~hmac=6409b9f3e5497d3cacf1f0b4112462df74bbbc8b22d35c941c72864df9448d0a",
+        "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
+        "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740"
+      ],
+      "brand": "chevrolet'2",
+      "model": "Equinox",
+      "year": "1967'2",
+      "milaeage": "12.985'2",
+      "value": "200.500'2",
+      "location": "Amontada - CE'2",
+      "favorite": false
+    },
+    {
+      "id": "3",
+      "img": [
+        "https://img.freepik.com/fotos-gratis/um-jipe-offroader-branco-no-estacionamento_114579-4007.jpg?w=740&t=st=1711559242~exp=1711559842~hmac=6409b9f3e5497d3cacf1f0b4112462df74bbbc8b22d35c941c72864df9448d0a",
+        "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
+        "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740"
+      ],
+      "brand": "chevrolet'3",
+      "model": "SUV",
+      "year": "1967'3",
+      "milaeage": "12.985'3",
+      "value": "200.500'3",
+      "location": "Amontada - CE'3",
+      "favorite": false
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "email": "hero1@gmail.com",
+      "name": "hemer1",
+      "password": "111111"
+    },
+    {
+      "id": "2",
+      "email": "hero2@gmail.com",
+      "name": "hemer2",
+      "password": "222222"
+    },
+    {
+      "id": "3",
+      "email": "hero3@gmail.com",
+      "name": "hemer3",
+      "password": "333333"
+    },
+    {
+      "name": "Hemerson",
+      "email": "hemerson.me@gmail.com",
+      "password": "123123",
+      "id": "uQ1Eo3H"
+    }
+  ]
+}
