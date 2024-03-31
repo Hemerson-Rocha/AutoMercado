@@ -2,6 +2,7 @@
 import styles from '../../assets/Card.module.css'
 import { Grid, Card, CardContent, CardMedia, Typography, CardActions, Button } from '@mui/material'
 import { CarType } from '../../models/interfaces/ResultApi'
+import { NavLink } from 'react-router-dom'
 
 
 interface CardProps {
@@ -15,7 +16,7 @@ const CardCar = ({ car }: CardProps) => {
         <div className={styles.image_container}>
           <CardMedia
             sx={{ height: 250 }}
-            image={car.img[0]}
+            image={car.img}
             title="Foto do carro"
             className={styles.image}
           />
@@ -45,7 +46,9 @@ const CardCar = ({ car }: CardProps) => {
         </CardContent>
         <CardActions>
           <Button size="small">favorite</Button>
-          <Button size="small">Mais detalhes</Button>
+          <NavLink to={`/cardetailed/${car.id}`}>
+            <Button size="small">Mais detalhes</Button>
+          </NavLink>
         </CardActions>
       </Card>
     </Grid>
