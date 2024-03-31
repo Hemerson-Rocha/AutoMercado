@@ -28,6 +28,7 @@ const Cards = () => {
             {cars.map((car) => (
               <Suspense key={car.id} fallback={ <Loading />}>
                 <CardCar
+                  setCars={setCars}
                   car={car}
                   />
             </Suspense>

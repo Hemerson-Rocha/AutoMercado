@@ -3,26 +3,30 @@ import { Grid, Card, CardContent, CardMedia, Typography, CardActions, Button } f
 import { CarType } from '../../models/interfaces/ResultApi'
 import { NavLink } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import { api } from '../../lib/axios'
+import FavoriteIcon from '@mui/icons-material/Favorite';
+// import { GetCars } from '../../lib/getCars'
 
 
 interface CardProps {
   car: CarType
+  setCars: React.Dispatch<React.SetStateAction<CarType[] | undefined>>
 }
 
 const CardCar = ({ car }: CardProps) => {
 
   const { auth, setAuth } = useContext(AuthContext)
+  const [callGet, setCallGet] = useState('')
 
+  
   const handleFavorite = ( idCar: string ) => {
-    console.log(`o id do carro é: ${idCar}`);
-    console.log(`o user é: ${auth?.favoriteCars}`);
     const userAddFavorite = auth
     userAddFavorite?.favoriteCars.push(idCar)
     setAuth(userAddFavorite)
     api.put(`/users/${auth?.id}`, userAddFavorite)
-    console.log(`o fav de user é: ${auth?.favoriteCars}`);
+    console.log(callGet);
+    setCallGet(' ')
   }
 
   return (
@@ -62,7 +66,15 @@ const CardCar = ({ car }: CardProps) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button onClick={() => handleFavorite(car.id)} size="small">favorite</Button>
+        {auth?.favoriteCars.includes(car.id) ? (
+          <Button>
+            <FavoriteIcon color='error' />
+          </Button>
+        ) : (      
+          <Button onClick={() => handleFavorite(car.id)} size="small">
+            <FavoriteIcon color='disabled' />
+          </Button>
+        )}
           <NavLink to={`/cardetailed/${car.id}`}>
             <Button size="small">Mais detalhes</Button>
           </NavLink>

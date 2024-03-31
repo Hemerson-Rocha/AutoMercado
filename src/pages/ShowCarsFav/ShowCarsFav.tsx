@@ -30,6 +30,7 @@ const ShowCarsFav = () => {
               <Suspense key={car.id} fallback={ <Loading />}>
               {auth?.favoriteCars.includes(car.id)  &&
                   <CardCar
+                    setCars={setCars}
                     car={car}
                     />}
                 </Suspense>

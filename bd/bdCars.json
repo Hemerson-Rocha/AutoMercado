@@ -97,7 +97,14 @@
       "email": "hero2@gmail.com",
       "name": "hemer2",
       "password": "222222",
-      "favoriteCars": []
+      "favoriteCars": [
+        "83Jkx9I",
+        "T5LQPAG",
+        "OkT2eBq",
+        "dH-IINo",
+        "t-uTyBL",
+        "3"
+      ]
     },
     {
       "id": "3",
@@ -112,11 +119,8 @@
       "password": "123123",
       "id": "uQ1Eo3H",
       "favoriteCars": [
-        "1",
         "2",
-        "3",
-        "T5LQPAG",
-        "OkT2eBq"
+        "3"
       ]
     }
   ]
