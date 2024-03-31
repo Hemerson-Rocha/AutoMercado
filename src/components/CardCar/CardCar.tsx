@@ -14,12 +14,14 @@ const CardCar = ({ car }: CardProps) => {
     <Grid item xs={7} md={6} lg={4} xl={3} sx={{margin:'auto'}}>
       <Card className={styles.Card}>
         <div className={styles.image_container}>
-          <CardMedia
-            sx={{ height: 250 }}
-            image={car.img}
-            title="Foto do carro"
-            className={styles.image}
-          />
+          <NavLink to={`/cardetailed/${car.id}`}>
+            <CardMedia
+              sx={{ height: 250 }}
+              image={car.img}
+              title="Foto do carro"
+              className={styles.image}
+              />
+          </NavLink>
         </div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">

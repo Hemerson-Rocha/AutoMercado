@@ -8,6 +8,7 @@ import Register from "./components/Register/Register"
 import SearchPage from "./pages/SearchPage/SearchPage"
 import ShowCarsFav from "./pages/ShowCarsFav/ShowCarsFav"
 import { RequireAuth } from "./contexts/RequireAuth"
+import DetailedCar from "./pages/DetailedCar/DetailedCar"
 
 
 export const router = createBrowserRouter([
@@ -25,6 +26,10 @@ export const router = createBrowserRouter([
       {
         path: '/search',
         element: <SearchPage/>
+      },
+      {
+        path: '/cardetailed/:id',
+        element: <DetailedCar/>
       },
       {
         path: '/carsfav',
