@@ -7,10 +7,11 @@ import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { api } from '../../lib/axios';
 
 const MenuAccount = () => {
     const navigate = useNavigate()
-    const { setAuth } = useContext(AuthContext)
+    const { auth ,setAuth } = useContext(AuthContext)
     const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
     const open = Boolean(anchorEl);
     const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
@@ -25,6 +26,20 @@ const MenuAccount = () => {
         navigate('/')
         setAuth(null)
         setAnchorEl(null);
+        window.location.reload()
+    };
+
+    const handleDelete = ( idUser: string | undefined ) => {
+        localStorage.clear()
+        navigate('/')
+        setAuth(null)
+        setAnchorEl(null);
+        console.log(`id do user: ${idUser}`);
+        
+        // delete
+        api.delete('/users/' + idUser)
+
+
         window.location.reload()
     };
 
@@ -53,7 +68,7 @@ const MenuAccount = () => {
                 <MeetingRoomIcon />
                 Logout
             </MenuItem>
-            <MenuItem onClick={handleClose}>
+            <MenuItem onClick={() => handleDelete(auth?.id)}>
                 <DeleteIcon />
                 Excluir Conta
             </MenuItem>

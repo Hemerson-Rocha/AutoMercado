@@ -48,12 +48,6 @@
   ],
   "users": [
     {
-      "id": "1",
-      "email": "hero1@gmail.com",
-      "name": "hemer1",
-      "password": "111111"
-    },
-    {
       "id": "2",
       "email": "hero2@gmail.com",
       "name": "hemer2",
