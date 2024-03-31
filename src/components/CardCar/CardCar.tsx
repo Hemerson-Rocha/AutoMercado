@@ -2,6 +2,9 @@ import styles from '../../assets/Card.module.css'
 import { Grid, Card, CardContent, CardMedia, Typography, CardActions, Button } from '@mui/material'
 import { CarType } from '../../models/interfaces/ResultApi'
 import { NavLink } from 'react-router-dom'
+import { AuthContext } from '../../contexts/AuthContext'
+import { useContext } from 'react'
+import { api } from '../../lib/axios'
 
 
 interface CardProps {
@@ -9,6 +12,19 @@ interface CardProps {
 }
 
 const CardCar = ({ car }: CardProps) => {
+
+  const { auth, setAuth } = useContext(AuthContext)
+
+  const handleFavorite = ( idCar: string ) => {
+    console.log(`o id do carro é: ${idCar}`);
+    console.log(`o user é: ${auth?.favoriteCars}`);
+    const userAddFavorite = auth
+    userAddFavorite?.favoriteCars.push(idCar)
+    setAuth(userAddFavorite)
+    api.put(`/users/${auth?.id}`, userAddFavorite)
+    console.log(`o fav de user é: ${auth?.favoriteCars}`);
+  }
+
   return (
     <Grid item xs={7} md={6} lg={4} xl={3} sx={{margin:'auto'}}>
       <Card className={styles.Card}>
@@ -46,7 +62,7 @@ const CardCar = ({ car }: CardProps) => {
           </Typography>
         </CardContent>
         <CardActions>
-          <Button size="small">favorite</Button>
+          <Button onClick={() => handleFavorite(car.id)} size="small">favorite</Button>
           <NavLink to={`/cardetailed/${car.id}`}>
             <Button size="small">Mais detalhes</Button>
           </NavLink>

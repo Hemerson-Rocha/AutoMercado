@@ -53,6 +53,7 @@ const Register = () => {
         name: data.name,
         email : data.email,
         password : data.password,
+        favoriteCars: []
     }
     api.post('/users', user) 
     navigate('/login')

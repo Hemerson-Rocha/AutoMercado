@@ -96,19 +96,27 @@
       "id": "2",
       "email": "hero2@gmail.com",
       "name": "hemer2",
-      "password": "222222"
+      "password": "222222",
+      "favoriteCars": []
     },
     {
       "id": "3",
       "email": "hero3@gmail.com",
       "name": "hemer3",
-      "password": "333333"
+      "password": "333333",
+      "favoriteCars": []
     },
     {
       "name": "Hemerson",
       "email": "hemerson.me@gmail.com",
       "password": "123123",
-      "id": "uQ1Eo3H"
+      "id": "uQ1Eo3H",
+      "favoriteCars": [
+        "1",
+        "2",
+        "3",
+        "T5LQPAG"
+      ]
     }
   ]
 }
