@@ -9,6 +9,7 @@ import SearchPage from "./pages/SearchPage/SearchPage"
 import ShowCarsFav from "./pages/ShowCarsFav/ShowCarsFav"
 import { RequireAuth } from "./contexts/RequireAuth"
 import DetailedCar from "./pages/DetailedCar/DetailedCar"
+import FormCar from "./pages/FormCar/FormCar"
 
 
 export const router = createBrowserRouter([
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: '/cardetailed/:id',
         element: <DetailedCar/>
+      },
+      {
+        path: '/formcar',
+        element: <FormCar/>
       },
       {
         path: '/carsfav',

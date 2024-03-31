@@ -1,4 +1,3 @@
-// import { Link } from 'react-router-dom'
 import styles from '../../assets/Card.module.css'
 import { Grid, Card, CardContent, CardMedia, Typography, CardActions, Button } from '@mui/material'
 import { CarType } from '../../models/interfaces/ResultApi'

@@ -5,6 +5,7 @@ import { CarType } from '../models/interfaces/ResultApi';
 import { Grid } from '@mui/material';
 import SearchForm from '../components/SearchForm/SearchForm';
 import { GetCars } from '../lib/getCars';
+import AddNewCar from '../components/AddNewCar/AddNewCar';
 const CardCar = lazy(() => import('../components/CardCar/CardCar'));
 
 
@@ -21,6 +22,7 @@ const Cards = () => {
     <div className={styles.container}>
       <h1 className={styles.title_h1}>Ultimos lançamentos</h1>
       <SearchForm />
+      <AddNewCar  />
         {cars &&
           <Grid container spacing={3}>
             {cars.map((car) => (

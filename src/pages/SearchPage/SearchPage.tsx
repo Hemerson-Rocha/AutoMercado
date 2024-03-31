@@ -24,7 +24,10 @@ const SearchPage = () => {
         <Grid container>
             
         <h1 className={styles.title_h1}>Resultados</h1>
-        <SearchForm />
+        <div>
+
+          <SearchForm  />
+        </div>
         {getedCars &&
           <Grid container spacing={3}>
             {getedCars.map((car) => (

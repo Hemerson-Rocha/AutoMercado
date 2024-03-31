@@ -18,7 +18,7 @@ const SearchForm = () => {
         
   return (
     <form onSubmit={handleSubmit(handleSubmitForm)} >
-        <Grid container alignItems={'center'} justifyContent={'center'} marginY={5} gap={2}>
+        <Grid sx={{ width:'100vw'}} container alignItems={'center'} justifyContent={'center'} marginY={5} gap={2}>
             <Grid item xs={4}>
                 <TextField
                 onChange={(e) => setQuery(e.target.value)}
