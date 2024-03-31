@@ -7,7 +7,6 @@ import MeetingRoomIcon from '@mui/icons-material/MeetingRoom';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
-import GetUserLoged from '../../lib/GetUserLoged';
 
 const MenuAccount = () => {
     const navigate = useNavigate()
@@ -24,18 +23,10 @@ const MenuAccount = () => {
     const handleLogout = () => {
         localStorage.clear()
         navigate('/')
-        setAuth()
+        setAuth(null)
         setAnchorEl(null);
         window.location.reload()
     };
-
-    // const { setAuth } = useContext(AuthContext)
-
-    // const userLoged = GetUserLoged()
-
-    // console.log(`user logado no home: ${userLoged}`);
-    // setAuth(userLoged)
-
 
     return (
         <div>

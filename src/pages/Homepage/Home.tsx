@@ -12,12 +12,7 @@ const Home = () => {
 
   const userLoged = GetUserLoged()
 
-  console.log(`user logado no home: ${userLoged}`);
-  setAuth(userLoged)
-  
-
-  // auth && window.location.reload()
-  // window.location.reload()
+  userLoged && setAuth(userLoged)
 
   return (
     <>

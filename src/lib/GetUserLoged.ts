@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { api } from './axios';
+import { UserType } from '../models/interfaces/ResultUserApi';
 
 // type Props = {}
 
 const GetUserLoged = () => {
-    const [auth, setAuth] = useState()
+    const [auth, setAuth] = useState<UserType>()
 
     useEffect(() => {
         (async () => {

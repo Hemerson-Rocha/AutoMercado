@@ -12,7 +12,6 @@ import logo_cars from '../../assets/logo_cars.png'
 import LoginIcon from '@mui/icons-material/Login';
 import { AuthContext } from '../../contexts/AuthContext';
 import MenuAccount from '../MenuAccount/MenuAccount';
-import GetUserLoged from '../../lib/GetUserLoged';
 
 const Header = () => {
   const [open, setOpen] = useState(false);
@@ -22,12 +21,6 @@ const Header = () => {
     setOpen(newOpen);
   };
   
-  // const { setAuth } = useContext(AuthContext)
-
-  //   const userLoged = GetUserLoged()
-
-  //   console.log(`user logado no home: ${userLoged}`);
-  //   setAuth(userLoged)
 
   return (
     <>

@@ -1,14 +1,11 @@
 import { createContext, useEffect, useState } from "react";
 import { UserType } from "../models/interfaces/ResultUserApi";
 import { api } from "../lib/axios";
-import GetUserLoged from "../lib/GetUserLoged";
 
 
 export type AuthContextType = {
     auth: UserType | null;
-    setAuth: Dispatch<SetStateAction<UserType>> | null;
-    // signin: (email: string, password: string) => Promise<boolean>;
-    // singout: () => void;
+    setAuth: React.Dispatch<React.SetStateAction<UserType | null>>
 }
 
 export const AuthContext = createContext<AuthContextType>(null!);
