@@ -33,6 +33,7 @@ const SearchPage = () => {
             {getedCars.map((car) => (
                 <Suspense key={car.id} fallback={ <Loading />}>
                 <CardExample
+                  setCars={setGetedCars}
                   car={car}
                   />
             </Suspense>

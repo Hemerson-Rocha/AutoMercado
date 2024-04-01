@@ -6,6 +6,7 @@ import { AuthContext } from '../../contexts/AuthContext'
 import { useContext, useState } from 'react'
 import { api } from '../../lib/axios'
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { GetCars } from '../../lib/getCars'
 // import { GetCars } from '../../lib/getCars'
 
 
@@ -14,7 +15,7 @@ interface CardProps {
   setCars: React.Dispatch<React.SetStateAction<CarType[] | undefined>>
 }
 
-const CardCar = ({ car }: CardProps) => {
+const CardCar = ({ car, setCars }: CardProps) => {
 
   const { auth, setAuth } = useContext(AuthContext)
   const [callGet, setCallGet] = useState('')
@@ -27,6 +28,17 @@ const CardCar = ({ car }: CardProps) => {
     api.put(`/users/${auth?.id}`, userAddFavorite)
     console.log(callGet);
     setCallGet(' ')
+  }
+  
+  const handleUnfavorite = ( idCar: string ) => {
+    const userRemoveFavorite = auth!
+    const index = auth?.favoriteCars.indexOf(idCar)
+    userRemoveFavorite.favoriteCars.splice(index!, 1);
+    setAuth(userRemoveFavorite)
+    api.put(`/users/${auth?.id}`, userRemoveFavorite)
+    setCallGet(' ')
+    const { getedCars } = GetCars()
+    setCars(getedCars)
   }
 
   return (
@@ -67,11 +79,11 @@ const CardCar = ({ car }: CardProps) => {
         </CardContent>
         <CardActions>
         {auth?.favoriteCars.includes(car.id) ? (
-          <Button>
+          <Button onClick={() => handleUnfavorite(car.id)}>
             <FavoriteIcon color='error' />
           </Button>
         ) : (      
-          <Button onClick={() => handleFavorite(car.id)} size="small">
+          <Button onClick={() => handleFavorite(car.id)}>
             <FavoriteIcon color='disabled' />
           </Button>
         )}
