@@ -25,23 +25,28 @@ const DetailedCar = ( ) => {
         })
     }, [id]);
 
-    const handleFavorite = ( idCar: string ) => {
+    const handleFavorite = () => {
         const userAddFavorite = auth
-        userAddFavorite?.favoriteCars.push(idCar)
+        // userAddFavorite?.favoriteCars.push(idCar)
+        userAddFavorite?.favoriteCars.push(car!)
         setAuth(userAddFavorite)
         api.put(`/users/${auth?.id}`, userAddFavorite)
         console.log(callGet);
         setCallGet(' ')
       }
       
-      const handleUnfavorite = ( idCar: string ) => {
+      const handleUnfavorite = () => {
         const userRemoveFavorite = auth!
-        const index = auth?.favoriteCars.indexOf(idCar)
+        // const index = auth?.favoriteCars.indexOf(idCar)
+        const index = auth?.favoriteCars.indexOf(car!)
         userRemoveFavorite.favoriteCars.splice(index!, 1);
         setAuth(userRemoveFavorite)
         api.put(`/users/${auth?.id}`, userRemoveFavorite)
         setCallGet(' ')
       }
+
+      const idList: string[] = []
+      auth && auth?.favoriteCars.map((car) => idList.push(car.id))
 
   return (
     <Grid container marginY={10}>
@@ -86,12 +91,13 @@ const DetailedCar = ( ) => {
                 </CardContent>
                 <CardActions>
                 { car &&
-                auth?.favoriteCars.includes(car.id) ? (
-                    <Button onClick={() => handleUnfavorite(car.id)}>
+                // auth?.favoriteCars.includes(car.id) ? (
+                    idList.includes(car.id) ? (
+                    <Button onClick={handleUnfavorite}>
                         <FavoriteIcon sx={{fontSize: '60px'}} color='error' />
                     </Button>
                 ) : (      
-                    <Button onClick={() => handleFavorite(car!.id)}>
+                    <Button onClick={handleFavorite}>
                         <FavoriteIcon sx={{fontSize: '60px'}} color='disabled' />
                     </Button>
                 )}

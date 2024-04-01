@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { api } from "../../lib/axios";
 import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 function Copyright() {
   return (
@@ -63,6 +64,7 @@ const Register = () => {
     }
     api.post('/users', user) 
     navigate('/login')
+    toast.success("Cadastro feito, faça login em sua conta")
   };
 
   return (

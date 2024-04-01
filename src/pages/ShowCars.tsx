@@ -31,7 +31,7 @@ const Cards = () => {
                   setCars={setCars}
                   car={car}
                   />
-            </Suspense>
+              </Suspense>
             ))}
           </Grid>
         }

@@ -7,6 +7,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { NavLink, useNavigate } from "react-router-dom";
+import { toast } from 'react-toastify';
 
 function Copyright() {
   return (
@@ -57,22 +58,21 @@ export default function Login() {
     return usersFind;
   };
 
-  const handleLogin = () => {
-    if (username && password) {
-      if (isVerifiedUser(username, password)) {
-        // window.location.reload()
-        navigate('/')
-      } else {
-        console.log('nao esta logado')    
-      }   
-    }
-    // (username && password) &&
-        // (isVerifiedUser(username, password)) 
-        //     ? navigate('/')
-        //     : console.log('nao esta logado')    
-  };
+  const loginSucess = () => {
+    navigate('/')
+    toast.success("Bem vindo de volta")
+  }
 
-  // window.location.reload()
+  const handleLogin = () => {
+    (username && password) &&
+      (isVerifiedUser(username, password)) ? (
+        loginSucess()
+      ) : ( 
+        toast.error("Email ou senha incorretos")
+      )  
+    
+    
+  };
 
   return (
     <Grid container component="main" height={'100vh'}>
@@ -128,7 +128,7 @@ export default function Login() {
               fullWidth
               variant="contained"
             >
-              Sign In
+              Entrar
             </Button>
             <Grid container>
               <Grid item>
