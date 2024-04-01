@@ -26,8 +26,8 @@ const CardCar = ({ car, setCars }: CardProps) => {
     userAddFavorite?.favoriteCars.push(idCar)
     setAuth(userAddFavorite)
     api.put(`/users/${auth?.id}`, userAddFavorite)
-    console.log(callGet);
     setCallGet(' ')
+    console.log(callGet);
   }
   
   const handleUnfavorite = ( idCar: string ) => {
@@ -36,7 +36,8 @@ const CardCar = ({ car, setCars }: CardProps) => {
     userRemoveFavorite.favoriteCars.splice(index!, 1);
     setAuth(userRemoveFavorite)
     api.put(`/users/${auth?.id}`, userRemoveFavorite)
-    setCallGet(' ')
+    
+    setCallGet('1')
     const { getedCars } = GetCars()
     setCars(getedCars)
   }

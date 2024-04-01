@@ -1,16 +1,19 @@
 import { useParams } from "react-router-dom"
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { api } from "../../lib/axios";
 import { CarType } from "../../models/interfaces/ResultApi";
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, Typography } from "@mui/material";
-// import { api } from "./axios";
-// import { CarType } from "../models/interfaces/ResultApi";
+import { AuthContext } from "../../contexts/AuthContext";
+
+import FavoriteIcon from '@mui/icons-material/Favorite';
 
 
 const DetailedCar = ( ) => {
     const { id } = useParams()
-
     const [car, setCar] = useState<CarType>()
+
+    const { auth, setAuth } = useContext(AuthContext)
+    const [callGet, setCallGet] = useState('')
 
     useEffect(() => {
         api.get('/cars/' + id)
@@ -21,6 +24,24 @@ const DetailedCar = ( ) => {
             console.log(`Error in get by API. ${err}`);
         })
     }, [id]);
+
+    const handleFavorite = ( idCar: string ) => {
+        const userAddFavorite = auth
+        userAddFavorite?.favoriteCars.push(idCar)
+        setAuth(userAddFavorite)
+        api.put(`/users/${auth?.id}`, userAddFavorite)
+        console.log(callGet);
+        setCallGet(' ')
+      }
+      
+      const handleUnfavorite = ( idCar: string ) => {
+        const userRemoveFavorite = auth!
+        const index = auth?.favoriteCars.indexOf(idCar)
+        userRemoveFavorite.favoriteCars.splice(index!, 1);
+        setAuth(userRemoveFavorite)
+        api.put(`/users/${auth?.id}`, userRemoveFavorite)
+        setCallGet(' ')
+      }
 
   return (
     <Grid container marginY={10}>
@@ -64,7 +85,16 @@ const DetailedCar = ( ) => {
                 </Typography>
                 </CardContent>
                 <CardActions>
-                <Button size="large">favorite</Button>
+                { car &&
+                auth?.favoriteCars.includes(car.id) ? (
+                    <Button onClick={() => handleUnfavorite(car.id)}>
+                        <FavoriteIcon sx={{fontSize: '60px'}} color='error' />
+                    </Button>
+                ) : (      
+                    <Button onClick={() => handleFavorite(car!.id)}>
+                        <FavoriteIcon sx={{fontSize: '60px'}} color='disabled' />
+                    </Button>
+                )}
                 </CardActions>
             </Card>
         </Grid>
