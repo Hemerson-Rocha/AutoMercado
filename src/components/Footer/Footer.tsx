@@ -41,19 +41,20 @@ const Footer = () => {
                 {/* <!--end footer col-->
                 <!-- footer col--> */}
                 <div className="footer-col">
-                    <h4>Se subescreva!</h4>
+                    {/* <h4>Se subescreva!</h4> */}
                     <div className="form-sub">
-                        <form>
-                            <input type="email" placeholder="Digite o seu e-mail" required />
-                            <button>subscrever</button>
-                        </form>
+                        {/* <form> */}
+                            {/* <input type="email" placeholder="Digite o seu e-mail" required /> */}
+                            
+                            {/* <button>subscrever</button> */}
+                        {/* </form> */}
                     </div>
 
                     <div className="medias-socias">
-                        <a href="#"> <i className="fa fa-facebook"></i> </a>
+                        {/* <a href="#"> <i className="fa fa-facebook"></i> </a>
                         <a href="#"> <i className="fa fa-instagram"></i> </a>
                         <a href="#"> <i className="fa fa-twitter"></i> </a>
-                        <a href="#"> <i className="fa fa-linkedin"></i> </a>
+                        <a href="#"> <i className="fa fa-linkedin"></i> </a> */}
                     </div>
 
                 </div>
