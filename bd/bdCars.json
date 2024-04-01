@@ -96,10 +96,7 @@
       "name": "Hemerson",
       "email": "hemerson.me@gmail.com",
       "password": "123123Hr",
-      "favoriteCars": [
-        "OkT2eBq",
-        "2"
-      ],
+      "favoriteCars": [],
       "id": 1
     }
   ]

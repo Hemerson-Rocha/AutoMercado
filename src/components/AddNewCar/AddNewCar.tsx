@@ -1,14 +1,18 @@
 import AddCircleIcon from '@mui/icons-material/AddCircle';
-import { Grid } from '@mui/material';
+import { Grid, Tooltip, Typography } from '@mui/material';
 import { NavLink } from 'react-router-dom';
 
 const AddNewCar = () => {
   return (
     <Grid container alignItems={'center'} justifyContent={'center'} marginBottom={3} gap={1}>
-        <h3>Divulgue seu carro</h3>
-        <NavLink to='/formcar'>
-            <AddCircleIcon fontSize='large' color='primary' />
-        </NavLink>
+        <Typography variant='h4'>
+          Divulgue seu carro
+        </Typography>
+        <Tooltip title="Adicione um carro" arrow>
+          <NavLink to='/formcar'>
+              <AddCircleIcon sx={{fontSize: '60px'}} color='primary' />
+          </NavLink>
+        </Tooltip>
     </Grid>
   )
 }

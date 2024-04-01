@@ -18,6 +18,14 @@ const ShowCarsFav = () => {
     setCars(getedCars)
   }, [getedCars])
 
+
+  const idList: string[] = []
+  auth && auth?.favoriteCars.map((car) => idList.push(car.id))
+
+  console.log(`ids: ${idList}`);
+  
+
+
   return (
     <>
     <div className={styles.container}>
@@ -28,7 +36,8 @@ const ShowCarsFav = () => {
           <Grid container spacing={3}>
             {cars.map((car) => (
               <Suspense key={car.id} fallback={ <Loading />}>
-              {auth?.favoriteCars.includes(car.id)  &&
+              {/* {auth?.favoriteCars.includes(car.id)  && */}
+              {idList.includes(car.id)  &&
                   <CardCar
                     setCars={setCars}
                     car={car}
