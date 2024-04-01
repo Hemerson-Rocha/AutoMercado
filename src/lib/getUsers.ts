@@ -16,11 +16,4 @@ export const GetUsers = () => {
     }, []);
 
     return { getedUsers }
-}
-
-// : React.SyntheticEvent
-
-// (username && password) &&
-//         (isVerifiedUser(username, password)) 
-//             ? console.log("esta logado")
-//             : console.log('nao esta logado')   
+}  

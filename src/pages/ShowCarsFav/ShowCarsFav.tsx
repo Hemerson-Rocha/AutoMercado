@@ -10,7 +10,7 @@ import { AuthContext } from "../../contexts/AuthContext"
 const CardCar = lazy(() => import('../../components/CardCar/CardCar'));
 
 const ShowCarsFav = () => {
-
+  
   const [cars, setCars] = useState<CarType[]>()
   const { auth } = useContext(AuthContext)
   const { getedCars } = GetCars()

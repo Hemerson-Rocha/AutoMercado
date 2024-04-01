@@ -1,18 +1,17 @@
-import { useContext, useEffect } from "react"
-import { AuthContext } from "./AuthContext"
+import { useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 
 export const RequireAuth =  ({ children } : { children: JSX.Element }) => {
     const navigate = useNavigate()
-    const { auth } = useContext(AuthContext)
+    const storageData = localStorage.getItem('auth')
     useEffect(() => {
         (async () => {
-            if (!auth) {
+            if (!storageData) {
                 console.log('naotemcontexto');
                 return navigate('/login')
             }
         })()   
-    }, [auth, navigate]);
+    }, [navigate, storageData]);
 
     return children
 }

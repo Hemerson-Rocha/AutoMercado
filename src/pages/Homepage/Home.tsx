@@ -27,10 +27,7 @@ const Home = () => {
        <Button sx={{width:'50px', height: '90px'}} variant="contained" color='error'>Contained</Button>
             <Button
             id="basic-button"
-            // aria-controls={open ? 'basic-menu' : undefined}
             aria-haspopup="true"
-            // aria-expanded={open ? 'true' : undefined}
-            // onClick={handleClick}
             >
             </Button>
             <button>click me</button>
