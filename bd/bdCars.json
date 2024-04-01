@@ -93,30 +93,14 @@
   ],
   "users": [
     {
-      "id": "2",
-      "email": "hero2@gmail.com",
-      "name": "hemer2",
-      "password": "222222",
-      "favoriteCars": [
-        "o_6qrRT"
-      ]
-    },
-    {
-      "id": "3",
-      "email": "hero3@gmail.com",
-      "name": "hemer3",
-      "password": "333333",
-      "favoriteCars": []
-    },
-    {
       "name": "Hemerson",
       "email": "hemerson.me@gmail.com",
-      "password": "123123",
-      "id": "uQ1Eo3H",
+      "password": "123123Hr",
       "favoriteCars": [
-        "2",
-        "OkT2eBq"
-      ]
+        "OkT2eBq",
+        "2"
+      ],
+      "id": 1
     }
   ]
 }

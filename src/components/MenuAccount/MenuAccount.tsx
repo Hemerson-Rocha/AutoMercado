@@ -8,6 +8,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../lib/axios';
+import { Typography } from '@mui/material';
 
 const MenuAccount = () => {
     const navigate = useNavigate()
@@ -64,6 +65,11 @@ const MenuAccount = () => {
                 'aria-labelledby': 'basic-button',
             }}
             >
+            <MenuItem>
+                <Typography>
+                    {auth?.name}
+                </Typography>
+            </MenuItem>
             <MenuItem onClick={handleLogout}>
                 <MeetingRoomIcon />
                 Logout

@@ -26,12 +26,18 @@ interface FormData  {
     confirmPassword: string
 }
 
+const regex = /^(?=.*[a-z])(?=.*[A-Z]).+$/
+
 const schema = z
     .object({
         name: z.string().min(4, {message: 'Seu nome não pode ter menos de 4 caracters'}),
         email: z.string(),
         password: z.string().min(6, {message: 'A senha deve ter mais de 6 caracters'}),
         confirmPassword: z.string().min(6, {message: 'A senha deve ter mais de 6 caracters'}),
+    })
+    .refine((fields) => regex.test(fields.password) , {
+        path: ['password'],
+        message: 'A senha deve ter pelo menos 6 caracteres e conter uma letra maiúscula e uma letra minúscula'
     })
     .refine((fields) => fields.password === fields.confirmPassword, {
         path: ['confirmPassword'],
