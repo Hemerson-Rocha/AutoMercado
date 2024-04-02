@@ -59,6 +59,7 @@ export default function Login() {
   };
 
   const loginSucess = () => {
+    // localStorage.clear()
     navigate('/')
     toast.success("Bem vindo de volta")
   }

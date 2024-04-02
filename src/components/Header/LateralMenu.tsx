@@ -4,13 +4,22 @@ import Divider from '@mui/material/Divider';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
 import HomeIcon from '@mui/icons-material/Home';
-import HorizontalSplitIcon from '@mui/icons-material/HorizontalSplit';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import DirectionsCarIcon from '@mui/icons-material/DirectionsCar';
 import { NavLink } from 'react-router-dom';
 import './LateralMenu.css'
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthContext';
 
-const LateralMenu = ({ toggleDrawer }) => {
+interface LateralMenuProps {
+    toggleDrawer: (newOpen: boolean) => () => void
+}
+
+const LateralMenu = ({ toggleDrawer }: LateralMenuProps) => {
+
+    const { auth } = useContext(AuthContext)
+
   return (
     <Box className='box-lateralMenu' sx={{ width: 250 }} role="presentation" onClick={toggleDrawer(false)}>
         <List>
@@ -24,12 +33,22 @@ const LateralMenu = ({ toggleDrawer }) => {
             </ListItem>
             <ListItem>
                 <ListItemIcon>
-                    <HorizontalSplitIcon />
+                    <DirectionsCarIcon />
                 </ListItemIcon>
                 <ListItemText>
-                    <NavLink to='/cards' >Products</NavLink>
+                    <NavLink to='/cards' >Carros</NavLink>
                 </ListItemText>
             </ListItem>
+        { auth && (
+            <ListItem>
+                <ListItemIcon>
+                    <FavoriteIcon />
+                </ListItemIcon>
+                <ListItemText>
+                    <NavLink to='/carsfav' >Carros favoritos</NavLink>
+                </ListItemText>
+            </ListItem>
+        )}
             {/* <ListItem>
                 <ListItemIcon>
                     <InboxIcon />

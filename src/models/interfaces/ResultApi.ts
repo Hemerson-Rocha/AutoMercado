@@ -8,7 +8,7 @@ export interface CarType {
     brand: string,
     model: string,
     year: string,
-    milaeage: string,
+    km: string,
     value: string,
     description: string,
     img: string,

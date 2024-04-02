@@ -77,7 +77,7 @@ const CardCar = ({ car, setCars }: CardProps) => {
             <Grid item xs={6}>
               <Typography width='full' display='flex'>
                 <SpeedIcon sx={{marginRight:'10px'}} />
-                {car.milaeage} Km
+                {car.km} Km
               </Typography>
               <Typography width='full' display='flex'>
                 <CalendarMonthIcon sx={{marginRight:'10px'}} />

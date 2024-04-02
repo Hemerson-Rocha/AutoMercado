@@ -36,18 +36,20 @@ const Home = () => {
           <DescriptiveParagraph />
         </Grid>
 
+        { useWidth() === 'xs'&& (
         <Grid item xs={12} paddingY={10}>
           <CarouselCars />
         </Grid>
+        ) }
 
         <Grid item xs={9} margin={'70px auto'}>
-          <Typography variant="h4" component="h2" gutterBottom>
+          <Typography variant="h4" component="h2" display={'flex'} justifyContent={'center'} gutterBottom>
             Existem várias razões para usar o site <span style={{color:'#3113ff'}}> AutoMercado</span> ao procurar um carro:
           </Typography>
         </Grid>
 
         <Grid item xs={9} margin={'70px auto'}>
-          <Card sx={{  }}>
+          <Card>
             <CardActionArea>
               <Grid container>
                 <Grid xs={3}

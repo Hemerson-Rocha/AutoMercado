@@ -17,7 +17,7 @@ const Header = () => {
   const [open, setOpen] = useState(false);
   const { auth } = useContext(AuthContext)
 
-  const toggleDrawer = (newOpen: boolean) => () => {
+  const toggleDrawer = (newOpen: boolean) => ():void => {
     setOpen(newOpen);
   };
   
@@ -37,7 +37,7 @@ const Header = () => {
           <Stack direction='row' spacing={2} className='navbar'>
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/cards'>Carros</NavLink>
-            <NavLink to='/carsfav'>Carros Favoritos</NavLink>
+            {auth && <NavLink to='/carsfav'>Carros Favoritos</NavLink>}
           </Stack>
           ) : (
             <div>
@@ -54,7 +54,12 @@ const Header = () => {
             {!(auth) ?
               (
                 <NavLink to={'/login'}>
-                  <LoginIcon fontSize='large' />
+                  <Button variant='contained'>
+                    <LoginIcon  />
+                    <Typography variant='button' marginLeft={1}>
+                      Login
+                    </Typography>
+                  </Button>
                 </NavLink>
               ) : (
                 <MenuAccount />

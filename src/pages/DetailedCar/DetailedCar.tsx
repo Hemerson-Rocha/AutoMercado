@@ -88,6 +88,12 @@ const DetailedCar = ( ) => {
                     </Typography>
                     {car?.value}
                 </Typography>
+                <Typography sx={{ m: 1.5 }} color="text.secondary" fontSize={20}>
+                    <Typography color='text.primary' variant='caption' fontSize={24}>
+                    Quilômetros rodados: 
+                    </Typography>
+                    {car?.km}
+                </Typography>
                 </CardContent>
                 <CardActions>
                 { car &&

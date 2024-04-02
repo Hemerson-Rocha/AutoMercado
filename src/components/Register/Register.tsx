@@ -86,7 +86,7 @@ const Register = () => {
             <LockOutlined />
           </Avatar>
           <Typography component="h1" variant="h5">
-            Register
+            Registro
           </Typography>
           <form onSubmit={handleSubmit(handleRegister)}>
             <TextField
