@@ -10,6 +10,7 @@ import DescriptiveParagraph from "./components/DescriptiveParagraph"
 import AddIcon from '@mui/icons-material/Add';
 import ContentPasteSearchIcon from '@mui/icons-material/ContentPasteSearch';
 import EmojiEmotionsIcon from '@mui/icons-material/EmojiEmotions';
+import CarouselCars from "./components/CarouselCars"
 
 const Home = () => {
 
@@ -27,12 +28,18 @@ const Home = () => {
           loading="lazy"
       />
     </div>
+
+
     <Box>
       <Grid container>
-
         <Grid item xs={9} margin={'70px auto'}>
           <DescriptiveParagraph />
         </Grid>
+
+        <Grid item xs={12} paddingY={10}>
+          <CarouselCars />
+        </Grid>
+
         <Grid item xs={9} margin={'70px auto'}>
           <Typography variant="h4" component="h2" gutterBottom>
             Existem várias razões para usar o site <span style={{color:'#3113ff'}}> AutoMercado</span> ao procurar um carro:
