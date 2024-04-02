@@ -1,5 +1,5 @@
 import styles from '../../assets/Card.module.css'
-import { Grid, Card, CardContent, CardMedia, Typography, CardActions, Button } from '@mui/material'
+import { Grid, Card, CardContent, CardMedia, Typography, CardActions, Button, Divider } from '@mui/material'
 import { CarType } from '../../models/interfaces/ResultApi'
 import { NavLink } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthContext'
@@ -8,6 +8,8 @@ import { api } from '../../lib/axios'
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import { GetCars } from '../../lib/getCars'
 // import { GetCars } from '../../lib/getCars'
+import SpeedIcon from '@mui/icons-material/Speed';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 
 interface CardProps {
@@ -61,27 +63,28 @@ const CardCar = ({ car, setCars }: CardProps) => {
           </NavLink>
         </div>
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography gutterBottom variant="h6" sx={{fontWeight:'bold'}} component="div">
             {car.model}
-          </Typography>
-          <Typography color='text.secondary' >
-            <Typography color='text.primary' variant='caption' fontSize={16}>
-              Marca:
-            </Typography> 
-            {car.brand}
-          </Typography>
-          <Typography color='text.secondary' >
-            <Typography color='text.primary' variant='caption' fontSize={16}>
-              Ano: 
+            <Typography color='gray'>
+              {car.brand}
             </Typography>
-            {car.year}
           </Typography>
-          <Typography sx={{ mb: 1.5 }} color="text.secondary">
-            <Typography color='text.primary' variant='caption' fontSize={16}>
-              Preço: 
-            </Typography>
-            {car.value}
-          </Typography>
+          <Typography color='text.primary' sx={{fontWeight:'bold', marginTop:'30px'}} variant='h6' fontSize={16}>
+            R$: {car.value}
+          </Typography> 
+          <Divider color='gray' sx={{marginY:'15px'}} />
+          <Grid container>
+            <Grid item xs={6}>
+              <Typography width='full' display='flex'>
+                <SpeedIcon sx={{marginRight:'10px'}} />
+                {car.milaeage} Km
+              </Typography>
+              <Typography width='full' display='flex'>
+                <CalendarMonthIcon sx={{marginRight:'10px'}} />
+                {car.year}
+              </Typography>
+            </Grid>
+          </Grid>
         </CardContent>
         <CardActions>
         {/* {auth?.favoriteCars.includes(car.id) ? ( */}
