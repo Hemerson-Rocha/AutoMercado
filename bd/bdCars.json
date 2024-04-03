@@ -93,13 +93,6 @@
   ],
   "users": [
     {
-      "name": "Hemerson",
-      "email": "hemerson.me@gmail.com",
-      "password": "123123Hr",
-      "favoriteCars": [],
-      "id": 1
-    },
-    {
       "name": "Ricardo",
       "email": "ricardo@gmail.com",
       "password": "123123Ri",
@@ -143,6 +136,82 @@
       "password": "123456Jb",
       "favoriteCars": [],
       "id": 3
+    },
+    {
+      "name": "Hemerson",
+      "email": "hemerson.me@gmail.com",
+      "password": "123123Hr",
+      "favoriteCars": [
+        {
+          "id": "2",
+          "img": "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
+          "brand": "chevrolet'2",
+          "model": "Equinox",
+          "year": "1967'2",
+          "km": "12.985'2",
+          "value": "200.500'2",
+          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'2"
+        },
+        {
+          "id": "3",
+          "img": "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740",
+          "brand": "chevrolet'3",
+          "model": "SUV",
+          "year": "1967'3",
+          "km": "12.985'3",
+          "value": "200.500'3",
+          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'3"
+        },
+        {
+          "brand": "Fiat",
+          "model": "Siena",
+          "year": "2013",
+          "km": "1233456",
+          "value": "7,500",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "img": "https://img.freepik.com/fotos-gratis/um-carro-esporte-com-autotuning-branco-preto-dirigindo-para-a-floresta_114579-4076.jpg?t=st=1711894357~exp=1711897957~hmac=6aca4a357694e9949fe3484a181ba22d19f47a8a12dcd09091e78a2d1eca4ae6&w=740",
+          "id": "o_6qrRT"
+        }
+      ],
+      "id": 5
+    },
+    {
+      "name": "Hemerson",
+      "email": "hemerson@gmail.com",
+      "password": "123123Hr",
+      "favoriteCars": [
+        {
+          "id": "3",
+          "img": "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740",
+          "brand": "chevrolet'3",
+          "model": "SUV",
+          "year": "1967'3",
+          "km": "12.985'3",
+          "value": "200.500'3",
+          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'3"
+        },
+        {
+          "id": "2",
+          "img": "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
+          "brand": "chevrolet'2",
+          "model": "Equinox",
+          "year": "1967'2",
+          "km": "12.985'2",
+          "value": "200.500'2",
+          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'2"
+        },
+        {
+          "brand": "Fiat",
+          "model": "Palio",
+          "year": "2013",
+          "km": "123",
+          "value": "5,500",
+          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+          "img": "https://img.freepik.com/fotos-gratis/carro-luxuoso-estacionado-na-estrada-com-um-farol-iluminado-ao-por-do-sol_181624-60607.jpg?t=st=1711895162~exp=1711898762~hmac=a526914e9a050fa782ebd5c2f400ac39022b4d1393d5bf39507f2c1ea15516ee&w=740",
+          "id": "OkT2eBq"
+        }
+      ],
+      "id": 6
     }
   ]
 }

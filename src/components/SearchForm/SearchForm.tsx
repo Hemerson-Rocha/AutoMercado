@@ -1,4 +1,4 @@
-import { Button, Grid, TextField } from "@mui/material"
+import { Button, Grid, Paper, TextField } from "@mui/material"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import SearchIcon from '@mui/icons-material/Search';
@@ -18,8 +18,8 @@ const SearchForm = () => {
         
   return (
     <form onSubmit={handleSubmit(handleSubmitForm)} >
-        <Grid sx={{ width:'100vw'}} container alignItems={'center'} justifyContent={'center'} marginY={5} gap={2}>
-            <Grid item xs={4}>
+        <Grid container alignItems={'center'} justifyContent={'center'} marginY={4} gap={2}>
+            <Grid item elevation={4} component={Paper}  xs={6}>
                 <TextField
                 onChange={(e) => setQuery(e.target.value)}
                 label="Busca algum carro?"

@@ -6,6 +6,9 @@ import { z } from "zod";
 import { api } from "../../lib/axios";
 import { NavLink, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
+import { useEffect, useState } from "react";
+import { UserType } from "../../models/interfaces/ResultUserApi";
+import { GetUsers } from "../../lib/getUsers";
 
 function Copyright() {
   return (
@@ -54,17 +57,62 @@ const Register = () => {
       resolver: zodResolver(schema)
   })
 
+  const [users, setUsers] = useState<UserType[]>()
+  const { getedUsers } = GetUsers()
 
-  const handleRegister = ( data: FormData ) => {
-    const user = {
-        name: data.name,
-        email : data.email,
-        password : data.password,
-        favoriteCars: []
-    }
-    api.post('/users', user) 
+  useEffect(() => {
+    setUsers(getedUsers)
+  }, [getedUsers]);
+
+
+  const isVerifiedUser=(username: string, password: string)=> {
+    let usersFind
+    users ? ( 
+      usersFind = users.find((user)=> user.email === username && user.password === password) 
+    ) : (
+      usersFind = undefined
+    )
+    usersFind && localStorage.setItem('auth', usersFind.id!)
+    return usersFind;
+  };
+
+  const registerSuccess = ( user: UserType ) => {
+    api.post('/users', user)
     navigate('/login')
     toast.success("Cadastro feito, faça login em sua conta")
+  }
+
+  const HandleRegister = ( data: FormData ) => {
+    const user = {
+          name: data.name,
+          email : data.email,
+          password : data.password,
+          favoriteCars: []
+      }
+    isVerifiedUser(data.email, data.password) ? (
+      toast.warning("Já existe uma conta com esse email")
+    ) : ( 
+      registerSuccess( user )
+    )
+    
+    
+    // console.log(`Opa: ${useAuthExists(data.email, data.password)}`)
+
+    // useAuthExists(data.email, data.password) ? (
+    //   console.log('existe conta com ees email')
+    //   ) : (
+    //   console.log('nao existe conta com ees email')
+    // )
+
+    // const user = {
+    //     name: data.name,
+    //     email : data.email,
+    //     password : data.password,
+    //     favoriteCars: []
+    // }
+    // api.post('/users', user) 
+    // navigate('/login')
+    // toast.success("Cadastro feito, faça login em sua conta")
   };
 
   return (
@@ -88,7 +136,7 @@ const Register = () => {
           <Typography component="h1" variant="h5">
             Registro
           </Typography>
-          <form onSubmit={handleSubmit(handleRegister)}>
+          <form onSubmit={handleSubmit(HandleRegister)}>
             <TextField
             {...register('name')}
             error={!!errors.name?.message}
@@ -132,16 +180,12 @@ const Register = () => {
             label="Confirm password"
             type="password"
             />
-            {/* <FormControlLabel
-              control={<Checkbox value="remember" />}
-              label="Remember me"
-            /> */}
             <Button
               type="submit"
               fullWidth
               variant="contained"
             >
-              Sign In
+              Cadastrar
             </Button>
             <Grid container>
               <Grid item>

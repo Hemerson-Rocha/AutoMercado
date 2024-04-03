@@ -8,7 +8,7 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { AuthContext } from '../../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 import { api } from '../../lib/axios';
-import { Typography } from '@mui/material';
+import { Divider, Typography } from '@mui/material';
 
 const MenuAccount = () => {
     const navigate = useNavigate()
@@ -66,10 +66,11 @@ const MenuAccount = () => {
             }}
             >
             <MenuItem>
-                <Typography>
+                <Typography variant='h5'>
                     {auth?.name}
                 </Typography>
             </MenuItem>
+            <Divider />
             <MenuItem onClick={handleLogout}>
                 <MeetingRoomIcon />
                 Logout

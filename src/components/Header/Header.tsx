@@ -25,14 +25,19 @@ const Header = () => {
   return (
     <>
     <AppBar position='static' sx={{height: `15vh`, justifyContent: 'center', padding:'0 4%'}}>
-      <Toolbar>
-        <img className='img_logo' src={logo_cars} alt="" />
-        <Typography 
-          variant={!(useWidth() === 'xs') ? 'h4' : 'h5'}
-          component='div' 
-          sx={{flexGrow: 1}}>
-          AutoMercado
-        </Typography>
+      <Toolbar sx={{justifyContent:'space-between'}}>
+        <NavLink to='/' style={{textDecoration:'none'}} >
+          <Stack direction='row' spacing={2}>
+          <img className='img_logo' src={logo_cars} alt="" />
+          <Typography 
+            variant={!(useWidth() === 'xs') ? 'h4' : 'h5'}
+            component='div' 
+            sx={{flexGrow: 1, color:'#fff'}}>
+            AutoMercado
+          </Typography>
+          </Stack>
+        </NavLink>
+
         {!(useWidth() === 'xs') ? (
           <Stack direction='row' spacing={2} className='navbar'>
             <NavLink to='/'>Home</NavLink>
@@ -63,7 +68,6 @@ const Header = () => {
                 </NavLink>
               ) : (
                 <MenuAccount />
-                // <AccountCircleIcon sx={{fontSize:'50px'}} />
               )}
           </Stack>
       </Toolbar>

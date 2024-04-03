@@ -71,8 +71,6 @@ export default function Login() {
       ) : ( 
         toast.error("Email ou senha incorretos")
       )  
-    
-    
   };
 
   return (
