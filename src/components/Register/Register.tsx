@@ -72,7 +72,7 @@ const Register = () => {
     ) : (
       usersFind = undefined
     )
-    usersFind && localStorage.setItem('auth', usersFind.id!)
+    // usersFind && localStorage.setItem('auth', usersFind.id!.toString())
     return usersFind;
   };
 

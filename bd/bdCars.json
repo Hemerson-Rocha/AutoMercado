@@ -8,12 +8,12 @@
       "year": "1967",
       "km": "12.985",
       "value": "200.500",
-      "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna."
+      "description": "O Chevrolet Impala é um sedan de tamanho grande fabricado pela Chevrolet, uma divisão da General Motors. Introduzido pela primeira vez em 1958, o Impala tornou-se um dos modelos mais icônicos e duradouros da marca Chevrolet. Ao longo das décadas, o Impala passou por várias iterações e atualizações, refletindo as tendências e mudanças no design automotivo."
     },
     {
       "id": "2",
       "img": "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
-      "brand": "chevrolet'2",
+      "brand": "chevrolet",
       "model": "Equinox",
       "year": "1967'2",
       "km": "12.985'2",
@@ -22,13 +22,13 @@
     },
     {
       "id": "3",
-      "img": "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740",
-      "brand": "chevrolet'3",
-      "model": "SUV",
+      "img": "https://img.freepik.com/fotos-premium/ilustracao-de-um-carro-em-um-fundo-limpo_964851-119121.jpg?w=740",
+      "brand": "Ford",
+      "model": "Mustang",
       "year": "1967'3",
       "km": "12.985'3",
       "value": "200.500'3",
-      "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'3"
+      "description": "O Ford Mustang é um ícone da cultura automotiva americana e um dos carros esportivos mais emblemáticos já produzidos. Desde o seu lançamento em 1964, o Mustang tem sido sinônimo de estilo, desempenho e uma experiência de condução emocionante. Com seu design distintivo de carroceria longa e capô curto, o Mustang é instantaneamente reconhecível. Desde o seu início, o Mustang passou por várias gerações e evoluções, mantendo sua essência esportiva ao longo dos anos. Desde os modelos clássicos dos anos 60 até as versões modernas, o Mustang sempre incorporou um estilo agressivo e atlético."
     },
     {
       "brand": "Fiat",
@@ -41,13 +41,13 @@
       "id": "o_6qrRT"
     },
     {
-      "brand": "Fiat",
-      "model": "Siena",
-      "year": "2013",
+      "brand": "Sedã",
+      "model": "BMW 3 Series",
+      "year": "1975",
       "km": "1233456",
       "value": "7,500",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "img": "https://img.freepik.com/fotos-gratis/um-carro-sedan-de-luxo-cinza-por-do-sol_114579-4045.jpg?t=st=1711894481~exp=1711898081~hmac=4c2512141c3b5562af655fac66d3df3e7bc44afcd18d1d3c9485a29ac82d33bb&w=740",
+      "description": "O BMW 3 Series é uma linha de sedans esportivos de luxo fabricada pela BMW, uma das marcas automotivas mais renomadas do mundo. Desde o seu lançamento em 1975, o 3 Series tem sido um dos modelos mais populares e influentes da BMW, estabelecendo-se como um padrão de referência no segmento de sedans esportivos de tamanho médio. O BMW 3 Series é amplamente conhecido por sua combinação de desempenho dinâmico, luxo refinado e tecnologia inovadora. Com um design elegante e aerodinâmico, o 3 Series apresenta linhas distintas que refletem sua natureza esportiva e sofisticada.",
+      "img": "https://img.freepik.com/fotos-gratis/carro-de-sedan-vintage-dirigindo-na-estrada_114579-5065.jpg?w=740",
       "id": "t-uTyBL"
     },
     {
@@ -93,175 +93,11 @@
   ],
   "users": [
     {
-      "name": "Ricardo",
-      "email": "ricardo@gmail.com",
-      "password": "123123Ri",
-      "favoriteCars": [
-        {
-          "brand": "Fiat",
-          "model": "Siena",
-          "year": "2013",
-          "km": "1233456",
-          "value": "7,500",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "img": "https://img.freepik.com/fotos-gratis/um-carro-esporte-com-autotuning-branco-preto-dirigindo-para-a-floresta_114579-4076.jpg?t=st=1711894357~exp=1711897957~hmac=6aca4a357694e9949fe3484a181ba22d19f47a8a12dcd09091e78a2d1eca4ae6&w=740",
-          "id": "o_6qrRT"
-        },
-        {
-          "brand": "Fiat",
-          "model": "Siena",
-          "year": "2013",
-          "km": "1233456",
-          "value": "7,500",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "img": "https://img.freepik.com/fotos-gratis/um-carro-sedan-de-luxo-cinza-por-do-sol_114579-4045.jpg?t=st=1711894481~exp=1711898081~hmac=4c2512141c3b5562af655fac66d3df3e7bc44afcd18d1d3c9485a29ac82d33bb&w=740",
-          "id": "t-uTyBL"
-        },
-        {
-          "brand": "Fiat",
-          "model": "Siena",
-          "year": "2013",
-          "km": "1233456",
-          "value": "7,500",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "img": "https://s2-autoesporte.glbimg.com/FL0to_5Q1N7QBH1Sklq5ave7lvI=/0x0:5000x3026/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_cf9d035bf26b4646b105bd958f32089d/internal_photos/bs/2021/J/k/MW00kVQbSEFniYY8WJEw/grand-siena-gnv-002.jpg",
-          "id": "T5LQPAG"
-        }
-      ],
-      "id": 2
-    },
-    {
-      "name": "jobin",
-      "email": "jobin@gmail.com",
-      "password": "123456Jb",
+      "name": "Hemerson",
+      "email": "hemerson.me@gmail.com",
+      "password": "1231223Hr",
       "favoriteCars": [],
-      "id": 3
-    },
-    {
-      "name": "Hemerson",
-      "email": "hemerson.me@gmail.com",
-      "password": "123123Hr",
-      "favoriteCars": [
-        {
-          "id": "2",
-          "img": "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
-          "brand": "chevrolet'2",
-          "model": "Equinox",
-          "year": "1967'2",
-          "km": "12.985'2",
-          "value": "200.500'2",
-          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'2"
-        },
-        {
-          "id": "3",
-          "img": "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740",
-          "brand": "chevrolet'3",
-          "model": "SUV",
-          "year": "1967'3",
-          "km": "12.985'3",
-          "value": "200.500'3",
-          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'3"
-        },
-        {
-          "brand": "Fiat",
-          "model": "Siena",
-          "year": "2013",
-          "km": "1233456",
-          "value": "7,500",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "img": "https://img.freepik.com/fotos-gratis/um-carro-esporte-com-autotuning-branco-preto-dirigindo-para-a-floresta_114579-4076.jpg?t=st=1711894357~exp=1711897957~hmac=6aca4a357694e9949fe3484a181ba22d19f47a8a12dcd09091e78a2d1eca4ae6&w=740",
-          "id": "o_6qrRT"
-        }
-      ],
-      "id": 5
-    },
-    {
-      "name": "Hemerson",
-      "email": "hemerson@gmail.com",
-      "password": "123123Hr",
-      "favoriteCars": [
-        {
-          "id": "3",
-          "img": "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740",
-          "brand": "chevrolet'3",
-          "model": "SUV",
-          "year": "1967'3",
-          "km": "12.985'3",
-          "value": "200.500'3",
-          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'3"
-        },
-        {
-          "id": "2",
-          "img": "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
-          "brand": "chevrolet'2",
-          "model": "Equinox",
-          "year": "1967'2",
-          "km": "12.985'2",
-          "value": "200.500'2",
-          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'2"
-        },
-        {
-          "brand": "Fiat",
-          "model": "Palio",
-          "year": "2013",
-          "km": "123",
-          "value": "5,500",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "img": "https://img.freepik.com/fotos-gratis/carro-luxuoso-estacionado-na-estrada-com-um-farol-iluminado-ao-por-do-sol_181624-60607.jpg?t=st=1711895162~exp=1711898762~hmac=a526914e9a050fa782ebd5c2f400ac39022b4d1393d5bf39507f2c1ea15516ee&w=740",
-          "id": "OkT2eBq"
-        }
-      ],
-      "id": 6
-    },
-    {
-      "name": "Hemerson",
-      "email": "hemerson.me@gmail.com",
-      "password": "123123Hr",
-      "id": 7
-    },
-    {
-      "name": "Hemerson",
-      "email": "hemerson.me@gmail.com",
-      "password": "123123Hr",
-      "id": 8
-    },
-    {
-      "name": "Hemerson2",
-      "email": "hemerson2.me@gmail.com",
-      "password": "123123Hr",
-      "favoriteCars": [
-        {
-          "id": "3",
-          "img": "https://img.freepik.com/fotos-premium/rayong-tailandia-11-de-setembro-de-2018-luz-traseira-da-bmw-mostrou_34872-107.jpg?w=740",
-          "brand": "chevrolet'3",
-          "model": "SUV",
-          "year": "1967'3",
-          "km": "12.985'3",
-          "value": "200.500'3",
-          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'3"
-        },
-        {
-          "brand": "Fiat",
-          "model": "Siena",
-          "year": "2013",
-          "km": "1233456",
-          "value": "7,500",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "img": "https://img.freepik.com/fotos-gratis/um-carro-esporte-com-autotuning-branco-preto-dirigindo-para-a-floresta_114579-4076.jpg?t=st=1711894357~exp=1711897957~hmac=6aca4a357694e9949fe3484a181ba22d19f47a8a12dcd09091e78a2d1eca4ae6&w=740",
-          "id": "o_6qrRT"
-        },
-        {
-          "brand": "Fiat",
-          "model": "Palio",
-          "year": "2013",
-          "km": "123",
-          "value": "5,500",
-          "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-          "img": "https://img.freepik.com/fotos-gratis/carro-luxuoso-estacionado-na-estrada-com-um-farol-iluminado-ao-por-do-sol_181624-60607.jpg?t=st=1711895162~exp=1711898762~hmac=a526914e9a050fa782ebd5c2f400ac39022b4d1393d5bf39507f2c1ea15516ee&w=740",
-          "id": "OkT2eBq"
-        }
-      ],
-      "id": 9
+      "id": 1
     }
   ]
 }
