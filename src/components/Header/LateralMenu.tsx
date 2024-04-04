@@ -49,14 +49,6 @@ const LateralMenu = ({ toggleDrawer }: LateralMenuProps) => {
                 </ListItemText>
             </ListItem>
         )}
-            {/* <ListItem>
-                <ListItemIcon>
-                    <InboxIcon />
-                </ListItemIcon>
-                <ListItemText>
-                    <NavLink to='/contact'>Contact</NavLink>
-                </ListItemText>
-            </ListItem> */}
         </List>
         <Divider />
     </Box>

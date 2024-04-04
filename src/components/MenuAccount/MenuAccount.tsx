@@ -36,8 +36,8 @@ const MenuAccount = () => {
         setAuth(null)
         setAnchorEl(null);
         console.log(`id do user: ${idUser}`);
-        
-        // delete
+
+
         api.delete('/users/' + idUser)
 
 

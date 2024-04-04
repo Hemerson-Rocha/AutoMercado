@@ -19,6 +19,7 @@ export const AuthContextProvider = ({children} : { children: JSX.Element }) => {
         (async () => {
             const storageData = localStorage.getItem('auth')
 
+            storageData && 
             api.get('/users/' + storageData)
             .then((response) => {
                 setAuth(response.data)

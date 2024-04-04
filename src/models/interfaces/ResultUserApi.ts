@@ -5,5 +5,5 @@ export interface UserType {
     name: string,
     email: string,
     password: string,
-    favoriteCars: CarType[],
+    favoriteCars?: CarType[],
 }

@@ -9,7 +9,7 @@ import LateralMenu from './LateralMenu';
 import { useContext, useState } from 'react';
 import { useWidth } from '../../hooks/useWidth';
 import logo_cars from '../../assets/logo_cars.png'
-import LoginIcon from '@mui/icons-material/Login';
+// import LoginIcon from '@mui/icons-material/Login';
 import { AuthContext } from '../../contexts/AuthContext';
 import MenuAccount from '../MenuAccount/MenuAccount';
 
@@ -39,10 +39,27 @@ const Header = () => {
         </NavLink>
 
         {!(useWidth() === 'xs') ? (
-          <Stack direction='row' spacing={2} className='navbar'>
+          <Stack direction='row' spacing={2} className='navbar' alignItems={'center'}>
             <NavLink to='/'>Home</NavLink>
             <NavLink to='/cards'>Carros</NavLink>
             {auth && <NavLink to='/carsfav'>Carros Favoritos</NavLink>}
+
+            {/* <Stack margin='0 2%'> */}
+            {!(auth) ?
+              (
+                <NavLink to={'/login'} style={{display:'flex'}}>
+                  {/* <Button variant='contained'> */}
+                    {/* <LoginIcon style={{fontSize:'20px'}} /> */}
+                    {/* <Typography variant='button' > */}
+                      Login
+                    {/* </Typography> */}
+                  {/* </Button> */}
+                </NavLink>
+              ) : (
+                <MenuAccount />
+              )}
+          {/* </Stack> */}
+
           </Stack>
           ) : (
             <div>
@@ -55,7 +72,8 @@ const Header = () => {
             </Drawer>
           </div>)
           }
-          <Stack margin='0 2%'>
+
+          {/* <Stack margin='0 2%'>
             {!(auth) ?
               (
                 <NavLink to={'/login'}>
@@ -69,7 +87,7 @@ const Header = () => {
               ) : (
                 <MenuAccount />
               )}
-          </Stack>
+          </Stack> */}
       </Toolbar>
     </AppBar>
     </>
