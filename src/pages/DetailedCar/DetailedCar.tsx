@@ -28,7 +28,7 @@ const DetailedCar = ( ) => {
     const handleFavorite = () => {
         const userAddFavorite = auth
         // userAddFavorite?.favoriteCars.push(idCar)
-        userAddFavorite?.favoriteCars.push(car!)
+        userAddFavorite?.favoriteCars!.push(car!)
         setAuth(userAddFavorite)
         api.put(`/users/${auth?.id}`, userAddFavorite)
         console.log(callGet);
@@ -38,15 +38,15 @@ const DetailedCar = ( ) => {
       const handleUnfavorite = () => {
         const userRemoveFavorite = auth!
         // const index = auth?.favoriteCars.indexOf(idCar)
-        const index = auth?.favoriteCars.indexOf(car!)
-        userRemoveFavorite.favoriteCars.splice(index!, 1);
+        const index = auth?.favoriteCars!.indexOf(car!)
+        userRemoveFavorite.favoriteCars!.splice(index!, 1);
         setAuth(userRemoveFavorite)
         api.put(`/users/${auth?.id}`, userRemoveFavorite)
         setCallGet(' ')
       }
 
       const idList: string[] = []
-      auth && auth?.favoriteCars.map((car) => idList.push(car.id))
+      auth && auth?.favoriteCars!.map((car) => idList.push(car.id))
 
   return (
     <Grid container marginY={10}>

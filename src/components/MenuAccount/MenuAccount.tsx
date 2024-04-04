@@ -30,7 +30,7 @@ const MenuAccount = () => {
         window.location.reload()
     };
 
-    const handleDelete = ( idUser: string | undefined ) => {
+    const handleDelete = ( idUser: number | undefined ) => {
         localStorage.clear()
         navigate('/')
         setAuth(null)

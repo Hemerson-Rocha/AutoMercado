@@ -91,13 +91,5 @@
       "id": "83Jkx9I"
     }
   ],
-  "users": [
-    {
-      "name": "Hemerson",
-      "email": "hemerson.me@gmail.com",
-      "password": "1231223Hr",
-      "favoriteCars": [],
-      "id": 1
-    }
-  ]
+  "users": []
 }
