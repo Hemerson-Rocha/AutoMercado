@@ -71,10 +71,10 @@ const FormCar = () => {
       brand: data.brand,
       model: data.model,
       year: data.year,
-      mileage: data.mileage,
-      value: data.value,
+      km: data.mileage,
+      price: data.value,
       description: data.description,
-      img: data.image,
+      urlImage: data.image,
     };
     // console.log("registro");
     

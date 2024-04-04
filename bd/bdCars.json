@@ -91,5 +91,34 @@
       "id": "83Jkx9I"
     }
   ],
-  "users": []
+  "users": [
+    {
+      "name": "Hemerson",
+      "email": "hemerson.me@gmail.com",
+      "password": "123123Hr",
+      "favoriteCars": [
+        {
+          "id": "3",
+          "img": "https://img.freepik.com/fotos-premium/ilustracao-de-um-carro-em-um-fundo-limpo_964851-119121.jpg?w=740",
+          "brand": "Ford",
+          "model": "Mustang",
+          "year": "1967'3",
+          "km": "12.985'3",
+          "value": "200.500'3",
+          "description": "O Ford Mustang é um ícone da cultura automotiva americana e um dos carros esportivos mais emblemáticos já produzidos. Desde o seu lançamento em 1964, o Mustang tem sido sinônimo de estilo, desempenho e uma experiência de condução emocionante. Com seu design distintivo de carroceria longa e capô curto, o Mustang é instantaneamente reconhecível. Desde o seu início, o Mustang passou por várias gerações e evoluções, mantendo sua essência esportiva ao longo dos anos. Desde os modelos clássicos dos anos 60 até as versões modernas, o Mustang sempre incorporou um estilo agressivo e atlético."
+        },
+        {
+          "id": "2",
+          "img": "https://img.freepik.com/fotos-gratis/carro-3d-em-uma-rua-da-cidade_23-2150796852.jpg?t=st=1711490956~exp=1711491556~hmac=1d17516d098e75d7ec5a0193056ddb668fdf7984489f458c9e9dd0ed5abc01f6",
+          "brand": "chevrolet",
+          "model": "Equinox",
+          "year": "1967'2",
+          "km": "12.985'2",
+          "value": "200.500'2",
+          "description": "Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna. Apresentamos o Chevrolet Equinox, um SUV que combina poder, conforto e estilo em um pacote impressionante. Este Equinox está pronto para se destacar nas estradas e atender às necessidades da vida moderna.'2"
+        }
+      ],
+      "id": 1
+    }
+  ]
 }

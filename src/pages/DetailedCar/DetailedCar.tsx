@@ -46,7 +46,7 @@ const DetailedCar = ( ) => {
       }
 
       const idList: string[] = []
-      auth && auth?.favoriteCars!.map((car) => idList.push(car.id))
+      auth?.favoriteCars && auth?.favoriteCars.map((car) => idList.push(car.id))
 
   return (
     <Grid container marginY={10}>

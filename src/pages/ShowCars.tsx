@@ -29,7 +29,7 @@ const Cards = () => {
       <AddNewCar  />
         {cars &&
           <Grid container spacing={3}>
-            {cars.map((car) => (
+            {cars && cars.map((car) => (
               <Suspense key={car.id} fallback={ <Loading />}>
                 <CardCar
                   setCars={setCars}

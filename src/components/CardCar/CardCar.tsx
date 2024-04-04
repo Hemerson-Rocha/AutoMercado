@@ -24,30 +24,51 @@ const CardCar = ({ car, setCars }: CardProps) => {
 
   
   const handleFavorite = () => {
-    const userAddFavorite = auth
-    // userAddFavorite?.favoriteCars.push(idCar) pode usar car.id
-    userAddFavorite?.favoriteCars!.push(car)
-    setAuth(userAddFavorite)
-    api.put(`/users/${auth?.id}`, userAddFavorite)
-    setCallGet(' ')
-    console.log(callGet);
+    // const userAddFavorite = auth
+    // // userAddFavorite?.favoriteCars.push(idCar) pode usar car.id
+    // userAddFavorite?.favoriteCars!.push(car)
+    // setAuth(userAddFavorite)
+    // api.put(`/users/${auth?.id}`, userAddFavorite)
+    // setCallGet(' ')
+    // console.log(callGet);
+
+
+
+
+    console.log(`/${auth?.id}/favorite/${car.id}`);
+    
+    api.post('/' + auth?.id + '/' + 'favorite/' + car.id)
   }
   
   const handleUnfavorite = () => {
-    const userRemoveFavorite = auth!
-    // const index = auth?.favoriteCars.indexOf(idCar) pode usar car.id
-    const index = auth?.favoriteCars!.indexOf(car)
-    userRemoveFavorite.favoriteCars!.splice(index!, 1);
-    setAuth(userRemoveFavorite)
-    api.put(`/users/${auth?.id}`, userRemoveFavorite)
+    // const userRemoveFavorite = auth!
+    // // const index = auth?.favoriteCars.indexOf(idCar) pode usar car.id
+    // const index = auth?.favoriteCars!.indexOf(car)
+    // userRemoveFavorite.favoriteCars!.splice(index!, 1);
+    // setAuth(userRemoveFavorite)
+    // api.put(`/users/${auth?.id}`, userRemoveFavorite)
     
-    setCallGet('1')
-    const { getedCars } = GetCars()
-    setCars(getedCars)
+    // setCallGet('1')
+    // const { getedCars } = GetCars()
+    // setCars(getedCars)
+
+
+
+
+    // const userRemoveFavorite = auth!
+    // // const index = auth?.favoriteCars.indexOf(idCar) pode usar car.id
+    // const index = auth?.favoriteCars!.indexOf(car)
+    // userRemoveFavorite.favoriteCars!.splice(index!, 1);
+    // setAuth(userRemoveFavorite)
+    api.post(`/3/favorite/1`)
+    
+    // setCallGet('1')
+    // const { getedCars } = GetCars()
+    // setCars(getedCars)
   }
 
   const idList: string[] = []
-  auth && auth?.favoriteCars!.map((car) => idList.push(car.id))
+  auth?.favoriteCars && auth?.favoriteCars.map((car) => idList.push(car.id))
 
   return (
     <Grid item xs={7} md={6} lg={4} xl={3} sx={{margin:'auto'}}>

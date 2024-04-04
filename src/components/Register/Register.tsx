@@ -9,6 +9,7 @@ import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { UserType } from "../../models/interfaces/ResultUserApi";
 import { GetUsers } from "../../lib/getUsers";
+import { CarType } from "../../models/interfaces/ResultApi";
 
 function Copyright() {
   return (
@@ -83,11 +84,12 @@ const Register = () => {
   }
 
   const HandleRegister = ( data: FormData ) => {
+    const favorite: CarType[] = []
     const user = {
           name: data.name,
           email : data.email,
           password : data.password,
-          favoriteCars: []
+          favoriteCars: favorite
       }
     isVerifiedUser(data.email, data.password) ? (
       toast.warning("Já existe uma conta com esse email")
